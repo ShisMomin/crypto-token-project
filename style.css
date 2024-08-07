@@ -1,0 +1,679 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}
+/* html {
+  scroll-behavior: smooth;
+} */
+
+/* ________________________________spinner start---------------------------------------  */
+
+.lds-roller,
+.lds-roller div,
+.lds-roller div:after {
+  box-sizing: border-box;
+}
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7.2px;
+  height: 7.2px;
+  border-radius: 50%;
+  background: currentColor;
+  margin: -3.6px 0 0 -3.6px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 62.62742px;
+  left: 62.62742px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 67.71281px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 70.90963px;
+  left: 48.28221px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 70.90963px;
+  left: 31.71779px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 67.71281px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 62.62742px;
+  left: 17.37258px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12.28719px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ______________________spinner End_____________________________________ */
+
+.head {
+  width: 100%;
+  height: 15%;
+}
+.header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-name {
+  width: 40%;
+  height: 90%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+.logo-name .logo {
+  width: 10%;
+  height: 80%;
+  border-radius: 20rem;
+}
+.logo-name .name {
+  margin-top: 0.8rem;
+}
+.searching {
+  width: 40%;
+}
+.searching form {
+  width: 100%;
+  height: 100%;
+}
+
+.searching input {
+  width: 40%;
+  height: 35%;
+  margin-top: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+.search-btn {
+  width: 14%;
+  height: 40%;
+  border-radius: 0.8rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.all-btn:hover {
+  background-color: blue;
+}
+
+.home {
+  width: 10%;
+  height: 100%;
+}
+.home-btn {
+  width: 55%;
+  height: 40%;
+  border-radius: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+/* _________________________________________Live data secion_________________________  */
+
+.live-data-section {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.live-data-btc {
+  width: 10%;
+  height: 100%;
+  display: grid;
+}
+.btc-logo {
+  justify-self: center;
+  align-self: center;
+  font-size: 50;
+}
+
+.sub-live-data {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.live-data {
+  font-size: 20;
+}
+
+/* _________________________________live-data-section-end _____________________ */
+
+.main-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+.main-section-link {
+  width: 57%;
+  height: 70%;
+  color: white;
+  text-decoration: none;
+  cursor: auto;
+}
+.main-section-content {
+  width: 60%;
+  height: 100%;
+  background-color: rgb(64, 70, 64);
+  border-radius: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 5rem;
+}
+
+.token-basic-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.token-full-name {
+  margin-top: 0.5rem;
+}
+.token-image-short-name {
+  width: 100%;
+  height: 88%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.token-image-short-name .token-image {
+  width: 20%;
+  height: 40%;
+}
+.token-image-short-name .short-name {
+  font-size: 2em;
+}
+.information {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2rem;
+}
+.all-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.see-more-btn {
+  width: 100%;
+  height: 150%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.see-more {
+  width: 60%;
+  height: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.see-more-link {
+  width: 100%;
+}
+.pagination {
+  margin-top: 2rem;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.pagination-btn {
+  width: 20%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.previous,
+.next {
+  width: 40%;
+  height: 100%;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.pagination-btn a {
+  width: 100%;
+  height: 100%;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  /* display: none; Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(227, 203, 203, 0.5); */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  /* cursor: pointer; Add a pointer on hover */
+}
+.hidden {
+  display: none;
+}
+
+/* ----------------------------modal css--------------------------  */
+.modal {
+  background-color: rgb(64, 70, 64);
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1.5rem;
+  z-index: -1;
+}
+.close-modal-btn {
+  width: 4%;
+  height: 6%;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+.close-btn {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 0.5rem;
+}
+.close-btn:hover {
+  background-color: blue;
+}
+.modal-container {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+.modal-section {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.modal-token-image {
+  width: 10%;
+  height: 40%;
+}
+.token-information {
+  height: 60%;
+  padding: 0.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.modal-data {
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal-data1,
+.modal-data2,
+.modal-data3 {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.text-data {
+  color: rgb(160, 160, 246);
+}
+
+/* ______________________________-responsive design__________________________________  */
+@media screen and (max-width: 1300px) {
+  .close-modal-btn {
+    width: 10%;
+  }
+  .token-information {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 60%;
+    row-gap: 0.5rem;
+    padding: 0.5rem;
+    display: grid;
+  }
+  .modal-data1,
+  .modal-data2,
+  .modal-data3 {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .overlay {
+    overflow-x: hidden;
+  }
+  .close-modal-btn {
+    width: 10%;
+  }
+  .modal {
+    height: 95%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .modal-data {
+    align-items: center;
+    height: 90%;
+  }
+  .token-information {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 93%;
+    row-gap: 0.5rem;
+    padding: 0.5rem;
+    display: grid;
+  }
+  .modal-data1,
+  .modal-data2,
+  .modal-data3 {
+    height: 100%;
+  }
+  .modal-data2 {
+    margin-left: 3.5rem;
+  }
+  .modal-total-supp-data {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 515) {
+  .modal-data {
+    padding: 0;
+    align-items: start;
+  }
+  .modal-data2 {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .logo-name .logo {
+    border-radius: 20rem;
+    width: 15%;
+    height: 60%;
+  }
+  .searching input {
+    width: 50%;
+  }
+  .search-btn {
+    width: 20%;
+  }
+  .home-btn {
+    width: 80%;
+  }
+  .information {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    display: grid;
+    row-gap: 2rem;
+  }
+  .all-data {
+    align-items: center;
+  }
+
+  .token-basic-info {
+    height: 50%;
+  }
+  .main-section-content {
+    width: 90%;
+    height: 40%;
+    display: block;
+  }
+  .pagination-btn {
+    width: 19%;
+  }
+  .pagination-btn a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .previous,
+  .next {
+    width: 60%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .live-data-section {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 1.5rem;
+  }
+  .sub-live-data {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    display: flex;
+  }
+}
+@media screen and (max-width: 800px) {
+  .live-data {
+    font-size: 1.1rem;
+  }
+  .logo-name .logo {
+    border-radius: 20rem;
+    width: 15%;
+    height: 60%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .live-data {
+    font-size: 0.8rem;
+  }
+
+  .pagination-btn {
+    width: 25%;
+  }
+  .pagination-btn a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .previous,
+  .next {
+    width: 60%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .logo-name .logo {
+    border-radius: 20rem;
+    width: 20%;
+    height: 60%;
+  }
+  .logo-name {
+    margin-left: 0.5rem;
+  }
+  .home {
+    width: 20%;
+    margin-left: 0.9rem;
+  }
+  .searching input {
+    width: 60%;
+  }
+  .search-btn {
+    width: 30%;
+  }
+  .home-btn {
+    width: 70%;
+  }
+
+  .live-data {
+    font-size: 0.7rem;
+  }
+
+  .pagination-btn {
+    width: 30%;
+  }
+  .pagination-btn a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .previous,
+  .next {
+    width: 60%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .logo-name {
+    margin-left: 0rem;
+    width: 30%;
+  }
+  .searching {
+    width: 50%;
+  }
+  .live-data {
+    font-size: 0.7rem;
+  }
+  .live-data-price {
+    text-align: center;
+  }
+  .sub-live-data {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .pagination-btn {
+    width: 40%;
+  }
+  .pagination-btn a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .previous,
+  .next {
+    width: 60%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo-name {
+    gap: 0.2rem;
+  }
+  .logo-name .logo {
+    border-radius: 20rem;
+    width: 40%;
+    height: 60%;
+  }
+  .searching {
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .searching {
+    width: 65%;
+    margin-left: 1.5rem;
+  }
+}
+
+/* ___________________________responsive-design-end______________________________  */
+/* ___________________________.....................______________________________  */
