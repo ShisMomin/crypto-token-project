@@ -37,7 +37,6 @@ export default class TokenView {
   }
 
   renderPaginationBtn() {
-    console.log(this._data, "lksd");
     this._parentElement.innerHTML = "";
     const markUp = this._generateMarkUp();
   }

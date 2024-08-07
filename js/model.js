@@ -14,7 +14,6 @@ export const searchResult = {
 export const loadData = async function () {
   try {
     const tempData = await getJson(`${API_URL}`);
-    console.log(tempData);
     state.data = tempData;
   } catch (err) {
     alert(err);
@@ -39,6 +38,5 @@ export const getResultsPage = function (page = state.page) {
   state.page = page;
   const start = (page - 1) * state.resultsPerPage;
   const end = page * state.resultsPerPage;
-  console.log(state.data.slice(start, end));
   return state.data.slice(start, end);
 };
