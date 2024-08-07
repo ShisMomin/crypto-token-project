@@ -72,12 +72,16 @@ const controlPagination = function (gotoPage) {
   tokenView.addHandleRenderModal(controlModalData);
 };
 
+const newFeature=function(){
+  console.log('Welcome to the application');
+}
+
 const init = function () {
   fetchData();
   liveData();
   searchView.addSearchHandler(controlSearchResult);
   pagination.addHandlerClick(controlPagination);
   viewModal.addHandlerCloseModal();
-  console.log('Welcome!');
+  newFeature();
 };
 init();
