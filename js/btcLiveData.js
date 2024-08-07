@@ -1,7 +1,6 @@
 const priceEle = document.querySelector(".price-value");
 const volumeEle = document.querySelector(".volume-value");
 const tradeIdEle = document.querySelector(".trade-id-value");
-console.log(tradeIdEle);
 let quantityEle = document.querySelector(".quantity-value");
 let oldPrice = Number.MIN_SAFE_INTEGER;
 let oldVolume = Number.MIN_SAFE_INTEGER;
