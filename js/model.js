@@ -34,7 +34,6 @@ export const loadSearchResult = async function (query) {
 };
 
 export const getResultsPage = function (page = state.page) {
-  console.log("called");
   state.page = page;
   const start = (page - 1) * state.resultsPerPage;
   const end = page * state.resultsPerPage;
